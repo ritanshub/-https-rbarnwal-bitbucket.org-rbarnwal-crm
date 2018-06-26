@@ -1,0 +1,22 @@
+﻿@using TravelCRM.Generic
+@model IEnumerable<TravelCRM.Areas.Employee.Model.LeadViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Index</h2>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div>
+    @{
+        var model1 = GenericContainer.Create(Model);
+        var temp = "test";
+    }
+    @await Html.PartialAsync("DisplayTemplate/GenericGrid", model1);
+
+    @*<partial name="DisplayTemplate/GenericGrid"
+        model='new Product { Number = 1, Name = "Test product", Description = "This is a test" }' />*@
+</div>

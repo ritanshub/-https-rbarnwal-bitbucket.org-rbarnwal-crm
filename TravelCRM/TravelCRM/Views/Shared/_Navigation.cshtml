@@ -1,0 +1,55 @@
+﻿<!--- Sidemenu -->
+@model 
+
+
+<!--- Sidemenu -->
+<div id="sidebar-menu">
+    <ul>
+
+@foreach (SideMenuViewModel menu in Model)
+{   
+    if (menu.SubMenu != null)
+    {
+        <li class="has_sub">
+        
+        @if (menu.IsAction)
+        {
+            <a href="@Url.Action(menu.Action, menu.Controller)" class="@menu.Class"> @Html.Raw(menu.Title)</a>
+        }
+        else
+        {
+            <a href="@Html.Raw(menu.Link)" class="@menu.Class"> @Html.Raw(menu.Title)</a>
+        }
+        
+        <ul class="list-unstyled">
+        @foreach (SideMenuViewModel subMenu in menu.SubMenu)
+        {
+            if (subMenu.IsAction)
+            {
+                <li><a href="@Url.Action(subMenu.Action, subMenu.Controller)">@subMenu.Title</a></li>
+            }
+            else
+            {
+                <li><a href="@Html.Raw(subMenu.Link)"> @Html.Raw(subMenu.Title)</a></li>
+            }
+        }
+        </ul>
+        </li>
+    }
+    else
+    {
+        if (menu.IsAction)
+        {
+            <li><a href="@Url.Action(menu.Action, menu.Controller)" class="@menu.Class"> @Html.Raw(menu.Title)</a></li>
+        }
+        else
+        {
+            <li><a href="@Html.Raw(menu.Link)" class="@menu.Class"> @Html.Raw(menu.Title)</a></li>
+        }
+    }
+
+}
+    </ul>
+    <div class="clearfix"></div>
+</div>
+<!-- Sidebar -->

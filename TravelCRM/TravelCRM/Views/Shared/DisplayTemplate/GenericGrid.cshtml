@@ -1,0 +1,94 @@
+﻿@using System.ComponentModel;
+@using System.Reflection;
+@using System.Security.Policy;
+@using System.Text;
+@*@using Microsoft.Ajax.Utilities;*@
+@using TravelCRM.ApplicationCore;
+@{
+    Layout = null;
+}
+
+@model TravelCRM.Generic.IGenericConatiner
+@{
+    IEnumerable<PropertyInfo> properties = null;
+
+    foreach (var item in Model.Data)
+    {
+        properties = item.GetType().GetProperties();
+    }
+}
+
+@*<div id="loading">
+    <img id="loading-image" src="" alt="Loading..." />
+</div>*@
+@if (properties != null)
+{
+    <table id="myTable" class="table table-responsive table-hover table-condensed table-striped">
+        <thead>
+            <tr>
+                @foreach (var prop in properties)
+                {
+                    var propattrs = prop.GetCustomAttributes(false);
+                    var attr = (from row in propattrs where row.GetType() == typeof(ColumnVisibility) select row).ToList().FirstOrDefault();
+                    var displayattr = (from row in propattrs where row.GetType() == typeof(DisplayNameAttribute) select row).ToList().FirstOrDefault();
+                    var displayName = (displayattr != null) ? ((DisplayNameAttribute)displayattr).DisplayName : prop.Name;
+                    var hideingrid = (attr != null) ? ((ColumnVisibility)attr).HideinGrid : 0;
+                    var attrtooltip = (from row in propattrs where row.GetType() == typeof(ToolTip) select row).ToList().FirstOrDefault();
+                    var tooltiptitle = (attrtooltip != null) ? ((ToolTip)attrtooltip).ToolTipText : String.Empty;
+
+                    if (hideingrid == 0)
+                    {
+                        if (@prop.Name.Contains("Action"))
+                        {
+                            <th></th>
+                        }
+                        else
+                        {
+                            <th data-toggle="tooltip" title=@prop.Name class="text-nowrap">@displayName</th>
+                        }
+                    }
+
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Data)
+            {
+                <tr>
+                    @foreach (var prop in properties)
+                    {
+                        var propattrs = prop.GetCustomAttributes(false);
+                        var attr = (from row in propattrs where row.GetType() == typeof(ColumnVisibility) select row).ToList().FirstOrDefault();
+                        var hideingrid = (attr != null) ? ((ColumnVisibility)attr).HideinGrid : 0;
+
+                        if (hideingrid == 0)
+                        {
+                            if (@prop.Name.Contains("Action_Version"))
+                            {
+                                @*<td>
+                                    <a id="editUserModal" href="@Url.Action(((prop.GetValue(item)).Action_Action),((prop.GetValue(item)).Action_Controller), new {dnaversion=((prop.GetValue(item)).Action_ID).ToString()})" class="btn btn-primary btn-xs">
+                                        <i class="glyphicon glyphicon-pencil"></i>@((prop.GetValue(item)).ActionText)
+                                    </a>
+                                </td>*@
+                            }
+
+                            else if (@prop.Name.Contains("Action"))
+                            {
+                                <td>
+                                    <a asp-controller="@((prop.GetValue(item)).Action_Control)" asp-action="@((prop.GetValue(item)).Action_Action))" asp-route-id="@((prop.GetValue(item)).Action_ID)">page @((prop.GetValue(item)).ActionText)</a>
+                                    @*<a id="editUserModal" href="@Url.Action(((prop.GetValue(item)).Action_Action),((prop.GetValue(item)).Action_Controller), new {id=((prop.GetValue(item)).Action_ID) })" class="btn btn-primary btn-xs">
+                                        <i class="glyphicon glyphicon-pencil"></i>@((prop.GetValue(item)).ActionText)
+                                    </a>*@
+                                </td>
+                            }
+                            else
+                            {
+                                <td>@prop.GetValue(item)</td>
+                            }
+                        }
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
