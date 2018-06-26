@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using TravelCRM.Areas.Login.Model;
 using System.Collections.Generic;
 using System;
+using TravelCRM.Areas.Employee.Model;
 
 namespace TravelCRM.Controllers.Login
 {
@@ -88,19 +89,29 @@ namespace TravelCRM.Controllers.Login
         }
 
         List<UserViewModel> _user = new List<UserViewModel> {
-               new UserViewModel { EmployeeID = 1, FirstName = "Ankur", LastName = "barnwal",EmailID="ashishbzz05@gmail.com",MobileNUmber=34,Active=1,DOB=DateTime.Now,RoleID=1},
-                     new UserViewModel { EmployeeID = 2, FirstName = "Ashish", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber = 34,Active=1,DOB=DateTime.Now,RoleID=1},
-               new UserViewModel { EmployeeID = 3, FirstName = "Rajesh", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber =43,Active=1,DOB=DateTime.Now,RoleID=1},
-               new UserViewModel { EmployeeID = 4, FirstName = "Tanya", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber = 43,Active=1,DOB=DateTime.Now,RoleID=1},
-               new UserViewModel { EmployeeID = 5, FirstName = "Akash", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber = 5,Active=1,DOB=DateTime.Now,RoleID=1},
-               new UserViewModel { EmployeeID = 6, FirstName = "Golu", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com",MobileNUmber = 4,Active=1,DOB=DateTime.Now,RoleID=1},
-               new UserViewModel { EmployeeID = 7, FirstName = "Ramesh", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com",MobileNUmber =6,Active=1,DOB=DateTime.Now,RoleID=1}
+               new UserViewModel { EmployeeID = 1, FirstName = "Ankur", LastName = "barnwal",EmailID="ashishbzz05@gmail.com",MobileNUmber=34,DOB=DateTime.Now},
+                     new UserViewModel { EmployeeID = 2, FirstName = "Ashish", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber = 34,DOB=DateTime.Now},
+               new UserViewModel { EmployeeID = 3, FirstName = "Rajesh", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber =43,DOB=DateTime.Now},
+               new UserViewModel { EmployeeID = 4, FirstName = "Tanya", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber = 43,DOB=DateTime.Now},
+               new UserViewModel { EmployeeID = 5, FirstName = "Akash", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber = 5,DOB=DateTime.Now},
+               new UserViewModel { EmployeeID = 6, FirstName = "Golu", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com",MobileNUmber = 4,DOB=DateTime.Now},
+               new UserViewModel { EmployeeID = 7, FirstName = "Ramesh", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com",MobileNUmber =6,DOB=DateTime.Now}
         };
 
-        public IActionResult GetUserProfile(int empid)
+        [HttpGet]
+        public ActionResult GetUserProfile(int id)
         {
-           
-            return View("Profile");
+            
+            UserViewModel user = _user.Find(x => x.EmployeeID == id);
+            return View("Profile",user);
         }
+
+        [HttpGet]
+        public ActionResult GetHelp(int id)
+        {
+            return View("Help");
+        }
+
+
     }
 }

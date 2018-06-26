@@ -15,11 +15,10 @@ namespace TravelCRM.Areas.Login.Model
         public int MobileNUmber { get; set; }
 
         public DateTime DOB { get; set; }
-        public int Active { get; set; }
-
-        public int RoleID { get; set; }
+        
         //public Role Role { get; set; }
     }
-   
+
+
 
 }

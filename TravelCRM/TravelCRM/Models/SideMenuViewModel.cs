@@ -18,4 +18,11 @@ namespace TravelCRM.Models
         public List<MenuViewModel> SubMenu { get; set; }
 
     }
+
+    public class UserNotification
+    {
+        public string Title { get; set; }
+        public string Details { get; set; }
+        public string Date { get; set; }
+    }
 }

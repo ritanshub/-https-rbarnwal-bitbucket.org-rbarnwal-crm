@@ -26,4 +26,10 @@ namespace TravelCRM.Areas.Employee.Model
 
         public string StayPeriod { get; set; }
     }
+    //public class UserNotification
+    //{
+    //    public string Title { get; set; }
+    //    public string Details { get; set; }
+    //    public string Date { get; set; }
+    //}
 }

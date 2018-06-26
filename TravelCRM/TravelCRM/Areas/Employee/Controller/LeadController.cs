@@ -44,5 +44,22 @@ namespace TravelCRM.Areas.Employee
             return View(model);
         }
 
+        //[HttpGet]
+        //public IActionResult Notification()
+        //{
+        //    List<UserNotification> modelnotification = new List<UserNotification>
+        //        {
+        //        new UserNotification{Title="Good Journey",Details="dest",Date="6 Days ago"},
+        //        new UserNotification{Title="Good Journey",Details="dest",Date="6 Days ago"},
+        //        new UserNotification{Title="Good Journey",Details="dest",Date="6 Days ago"},
+        //        new UserNotification{Title="Good Journey",Details="dest",Date="6 Days ago"},
+        //        new UserNotification{Title="Good Journey",Details="dest",Date="6 Days ago"}
+
+        //    }
+        //    ;
+
+        //    return View(modelnotification);
+        //}
+
     }
 }
