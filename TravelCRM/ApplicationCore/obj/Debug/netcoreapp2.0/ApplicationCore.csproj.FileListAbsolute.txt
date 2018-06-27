@@ -6,12 +6,3 @@ C:\Users\Rohit_PC\source\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0
 C:\Users\Rohit_PC\source\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.AssemblyInfo.cs
 C:\Users\Rohit_PC\source\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.dll
 C:\Users\Rohit_PC\source\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.pdb
-D:\POC\repos\TravelCRM\ApplicationCore\bin\Debug\netcoreapp2.0\ApplicationCore.deps.json
-D:\POC\repos\TravelCRM\ApplicationCore\bin\Debug\netcoreapp2.0\ApplicationCore.dll
-D:\POC\repos\TravelCRM\ApplicationCore\bin\Debug\netcoreapp2.0\ApplicationCore.pdb
-D:\POC\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.csproj.CoreCompileInputs.cache
-D:\POC\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.AssemblyInfoInputs.cache
-D:\POC\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.AssemblyInfo.cs
-D:\POC\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.dll
-D:\POC\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.pdb
-D:\POC\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.csprojAssemblyReference.cache

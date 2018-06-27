@@ -41,6 +41,7 @@ namespace TravelCRMServices
     {
 
         SingnInResult LoginUser(ApplicationUser User);
+        ApplicationUser CreateAppUser(ApplicationUser user);
         string GetRole(string UserID);
     }
 
@@ -53,14 +54,16 @@ namespace TravelCRMServices
     public interface IEmployeeOperationService
     {
         LeadEmployeeMapper AssignLeadToEmployee(int LeadID,int ManagerID, int employeeID);
-
+        Employee AddEmployee(Employee employee);
+        IEnumerable<Employee> GetEmployees();
     }
 
     public interface IAuthService
     {
-        PermissionDetails GetPermissionDetails(int RoleID, string ControllerName, string ActionName);
-
+       PermissionDetails GetPermissionDetails(int RoleID, string ControllerName, string ActionName);
        bool HasPermission(int RoleID, string ControllerName, string ActionName,string Method);
+        // KeyValuePair<string, List<string>> keyValuePair = new KeyValuePair<string, List<string>>();
+        Dictionary<string, List<string>> GetAllowedControllerActionForRole(int Role);
 
 
     }

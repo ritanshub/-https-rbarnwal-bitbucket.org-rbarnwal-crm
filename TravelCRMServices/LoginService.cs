@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TravelCRMEntities;
+﻿using TravelCRMEntities;
 using TravelCRMRepo;
 
 namespace TravelCRMServices
@@ -44,6 +41,19 @@ namespace TravelCRMServices
         {
 
             return string.Empty;
+        }
+
+        public ApplicationUser CreateAppUser(ApplicationUser user)
+        {
+            ApplicationUser LocalAppuser = null;
+
+            if (user != null)
+            {
+
+                LocalAppuser= unitOfWork.LoginRepository.Add(user);
+            }
+
+            return LocalAppuser;
         }
     }
 }

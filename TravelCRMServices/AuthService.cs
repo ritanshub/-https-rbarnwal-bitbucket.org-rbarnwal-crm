@@ -67,7 +67,41 @@ namespace TravelCRMServices
         {
             throw new NotImplementedException();
         }
+        //Code Quality Issue Will fixed Later on
+        public Dictionary<string, List<string>> GetAllowedControllerActionForRole(int Role)
+        {
+            IEnumerable<PermissionDetails> resultset= unitOfWork.PermissionRepository.GetManyUsingFunc(r => r.RoleID == Role);
+            Dictionary<string, List<string>> keyValue = new Dictionary<string, List<string>>();
 
+            keyValue.Add("ab", new List<string>());
+
+            foreach(PermissionDetails per in resultset)
+            {
+                if(!keyValue.ContainsKey(per.ControllerName))
+                {
+                  keyValue.Add(per.ControllerName, GetActionName(per.ControllerName, resultset));
+                }
+                
+            }
+
+            return null;
+        }
+
+       
+        private List<string> GetActionName(string ControllerName,IEnumerable<PermissionDetails> details)
+        {
+            List<string> list = new List<string>();
+
+            foreach(PermissionDetails pers in details)
+            {
+                if(pers.ControllerName == ControllerName)
+                {
+                    list.Add(pers.ActionName);
+                }
+            }
+            return list;
+        }
+        
         //This should be removed
 
 

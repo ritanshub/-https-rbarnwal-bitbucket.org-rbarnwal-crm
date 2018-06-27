@@ -620,3 +620,58 @@ System.InvalidOperationException: The partial view 'UserSetting' was not found. 
 2018-06-26 00:47:22.674 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/fonts/sourcesanspro/sourcesanspro.woff  
 2018-06-26 00:47:22.738 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 49.2091ms 404 
 2018-06-26 00:47:22.767 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 55.6132ms 404 
+2018-06-26 22:31:36.195 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\RICHA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-26 22:31:37.448 +05:30 [Information] start: Executing Configure Method
+2018-06-26 22:31:41.245 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-26 22:31:58.926 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/  
+2018-06-26 22:31:58.931 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 DEBUG http://localhost:50310/  0
+2018-06-26 22:31:59.251 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 344.1188ms 200 
+2018-06-26 22:32:04.371 +05:30 [Information] Microsoft.AspNetCore.Authorization.DefaultAuthorizationService: Authorization failed for user: (null).
+2018-06-26 22:32:04.384 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-06-26 22:32:04.405 +05:30 [Information] Microsoft.AspNetCore.Mvc.ChallengeResult: Executing ChallengeResult with authentication schemes ().
+2018-06-26 22:32:04.424 +05:30 [Information] Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler: AuthenticationScheme: Cookies was challenged.
+2018-06-26 22:32:04.435 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.HomeController.Index (TravelCRM) in 4271.6876ms
+2018-06-26 22:32:04.460 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 5550.8202ms 302 
+2018-06-26 22:32:04.473 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Login/Account/Login?ReturnUrl=%2F  
+2018-06-26 22:32:04.832 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) with arguments (/) - ModelState is Valid
+2018-06-26 22:32:11.883 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor: Executing ViewResult, running view at path /Areas/Login/Views/Account/Login.cshtml.
+2018-06-26 22:32:12.231 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) in 7695.0137ms
+2018-06-26 22:32:12.411 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 7773.9642ms 200 text/html; charset=utf-8
+2018-06-26 22:35:29.556 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/employee/lead/index  
+2018-06-26 22:35:29.569 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Areas.Employee.LeadController.Index (TravelCRM) with arguments ((null)) - ModelState is Valid
+2018-06-26 22:35:30.152 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor: Executing ViewResult, running view at path /Areas/Employee/Views/Lead/Index.cshtml.
+2018-06-26 22:35:34.728 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Areas.Employee.LeadController.Index (TravelCRM) in 5161.0935ms
+2018-06-26 22:35:34.783 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 5200.3845ms 200 text/html; charset=utf-8
+2018-06-26 22:35:35.236 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/fonts/sourcesanspro/sourcesanspro.woff  
+2018-06-26 22:35:35.320 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/fonts/sourcesanspro/sourcesanspro-bold.woff  
+2018-06-26 22:35:35.363 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 53.1983ms 404 
+2018-06-26 22:35:35.450 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 182.1521ms 404 
+2018-06-26 22:43:52.369 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Login/Account/GetUserProfile/1  
+2018-06-26 22:43:52.400 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.GetUserProfile (TravelCRM) with arguments (1) - ModelState is Valid
+2018-06-26 22:43:52.937 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor: Executing ViewResult, running view at path /Areas/Login/Views/Account/Profile.cshtml.
+2018-06-26 22:43:53.375 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.Login.AccountController.GetUserProfile (TravelCRM) in 814.8429ms
+2018-06-26 22:43:53.452 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 1035.5929ms 200 text/html; charset=utf-8
+2018-06-26 22:43:53.520 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/fonts/sourcesanspro/sourcesanspro-bold.woff  
+2018-06-26 22:43:53.526 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/fonts/sourcesanspro/sourcesanspro.woff  
+2018-06-26 22:43:53.554 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 12.3241ms 404 
+2018-06-26 22:43:53.570 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 23.6964ms 404 
+2018-06-26 22:44:22.970 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Login/Account/GetHelp  
+2018-06-26 22:44:22.980 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.GetHelp (TravelCRM) with arguments (0) - ModelState is Valid
+2018-06-26 22:44:23.171 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor: Executing ViewResult, running view at path /Areas/Login/Views/Account/Help.cshtml.
+2018-06-26 22:44:23.491 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.Login.AccountController.GetHelp (TravelCRM) in 211.0227ms
+2018-06-26 22:44:23.516 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/fonts/sourcesanspro/sourcesanspro.woff  
+2018-06-26 22:44:23.634 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 567.2733ms 200 text/html; charset=utf-8
+2018-06-26 22:44:23.691 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/fonts/sourcesanspro/sourcesanspro-bold.woff  
+2018-06-26 22:44:23.706 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 205.1998ms 404 
+2018-06-26 22:44:23.760 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 239.8032ms 404 
+2018-06-26 22:44:29.330 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Login/Account/Logout  
+2018-06-26 22:44:29.357 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.Logout (TravelCRM) with arguments ((null)) - ModelState is Valid
+2018-06-26 22:44:29.374 +05:30 [Information] Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler: AuthenticationScheme: Cookies signed out.
+2018-06-26 22:44:29.465 +05:30 [Information] Microsoft.AspNetCore.Mvc.RedirectToActionResult: Executing RedirectResult, redirecting to /Login/Account/Login.
+2018-06-26 22:44:29.479 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.Login.AccountController.Logout (TravelCRM) in 117.8777ms
+2018-06-26 22:44:29.503 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 150.2144ms 302 
+2018-06-26 22:44:29.510 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Login/Account/Login  
+2018-06-26 22:44:29.533 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) with arguments () - ModelState is Valid
+2018-06-26 22:44:29.552 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor: Executing ViewResult, running view at path /Areas/Login/Views/Account/Login.cshtml.
+2018-06-26 22:44:29.567 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) in 30.3532ms
+2018-06-26 22:44:29.673 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 86.6223ms 200 text/html; charset=utf-8

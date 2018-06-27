@@ -164,7 +164,7 @@ namespace TravelCRMEntities
 
     }
 
-    public class PermissionDetails
+    public class PermissionDetails: BaseEntities
     {
 
 
@@ -181,7 +181,7 @@ namespace TravelCRMEntities
 
     }
 
-    public class ApplicationUser 
+    public class ApplicationUser :BaseEntities
     {
         [Key]
         public string UserName { get; set; }

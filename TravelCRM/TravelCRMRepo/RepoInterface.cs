@@ -37,6 +37,8 @@ public interface IRepository<T> where T : class
     // Gets entities using delegate
     IEnumerable<T> GetMany(Expression<Func<T, bool>> where);
 
-    
-    
+    IEnumerable<T> GetManyUsingFunc(Func<T, bool> where);
+
+
+
 }

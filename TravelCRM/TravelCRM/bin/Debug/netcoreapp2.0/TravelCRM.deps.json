@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "36ff1ac3ffc7e16783ee0153c0ac32a3e62c0d09"
+    "signature": "7a8d613ce996f0e5e8d1553e56b0110d97838149"
   },
   "compilationOptions": {
     "defines": [
@@ -23,7 +23,8 @@
     ".NETCoreApp,Version=v2.0": {
       "TravelCRM/1.0.0": {
         "dependencies": {
-          "DataAnnotationValidator": "1.0.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "4.0.1",
+          "MenuManager": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.1.1",
           "Microsoft.NETCore.App": "2.0.0",
@@ -39,12 +40,27 @@
           "TravelCRM.dll": {}
         }
       },
-      "DataAnnotationValidator/1.0.0.1": {
+      "AutoMapper/7.0.1": {
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
         "runtime": {
-          "lib/net451/DataAnnotationValidator.dll": {}
+          "lib/netcoreapp2.0/AutoMapper.dll": {}
         },
         "compile": {
-          "lib/net451/DataAnnotationValidator.dll": {}
+          "lib/netcoreapp2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/4.0.1": {
+        "dependencies": {
+          "AutoMapper": "7.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -1434,7 +1450,7 @@
           "System.Threading.Tasks": "4.3.0",
           "System.Threading.Tasks.Parallel": "4.3.0",
           "System.Threading.Thread": "4.3.0",
-          "System.ValueTuple": "4.4.0",
+          "System.ValueTuple": "4.5.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath.XDocument": "4.3.0",
@@ -2076,7 +2092,7 @@
           "Microsoft.Extensions.Logging": "2.1.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
           "Microsoft.Extensions.Logging.Configuration": "2.0.0",
-          "System.ValueTuple": "4.4.0"
+          "System.ValueTuple": "4.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.AzureAppServices.dll": {}
@@ -4012,7 +4028,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.ValueTuple/4.4.0": {},
+      "System.ValueTuple/4.5.0": {},
       "System.Xml.ReaderWriter/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -4121,6 +4137,14 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
+        }
+      },
+      "MenuManager/1.0.0": {
+        "runtime": {
+          "MenuManager.dll": {}
+        },
+        "compile": {
+          "MenuManager.dll": {}
         }
       },
       "TravelCRMData/1.0.0": {
@@ -4351,12 +4375,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DataAnnotationValidator/1.0.0.1": {
+    "AutoMapper/7.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-d03D7zh9re+5GPJIacrnjMuTZgfKCdeGp0E+CfNHl0p/jHnxmmyx9AjpmK4TEZXI6pm6aJ1CZScj2OFzDJjbxQ==",
-      "path": "dataannotationvalidator/1.0.0.1",
-      "hashPath": "dataannotationvalidator.1.0.0.1.nupkg.sha512"
+      "sha512": "sha512-6xHbhsW09sWjjYuE1sqhYn25PQzB6UEUVPME5uhlaIz2NR2+L3+FGbVxvknJKug1BLp6VTLxDb5RcGXKMm0ieQ==",
+      "path": "automapper/7.0.1",
+      "hashPath": "automapper.7.0.1.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Fhl+XDdcR2ogcqyHIeTB5fGCB58wTXOdpiqDI4sh/durRx8LJw+QJw2ZGLO3DIXTPvvnHM/t0DZy0vf0cdIGEg==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/4.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.4.0.1.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",
@@ -6265,7 +6296,7 @@
     "System.Runtime.Serialization.Formatters/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+      "sha512": "sha512-y2cbgOx0QMrz6U4dkW4zKj58ZkzvNk+6nZOajr9Z41dZCJ7GTKhABSgxkCGQVPbecVtst0XkRV4WYlxnb6jNxA==",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "hashPath": "system.runtime.serialization.formatters.4.3.0.nupkg.sha512"
     },
@@ -6458,12 +6489,12 @@
       "path": "system.threading.timer/4.3.0",
       "hashPath": "system.threading.timer.4.3.0.nupkg.sha512"
     },
-    "System.ValueTuple/4.4.0": {
+    "System.ValueTuple/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
-      "path": "system.valuetuple/4.4.0",
-      "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
+      "sha512": "sha512-xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "System.Xml.ReaderWriter/4.3.0": {
       "type": "package",
@@ -6513,6 +6544,11 @@
       "sha512": "sha512-W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
+    },
+    "MenuManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "TravelCRMData/1.0.0": {
       "type": "project",

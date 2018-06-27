@@ -1,0 +1,268 @@
+2018-06-24 11:17:46.362 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\Rohit_PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-24 11:17:46.973 +05:30 [Information] start: Executing Configure Method
+2018-06-24 11:17:55.194 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-24 11:17:59.600 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (3,160ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2018-06-24 11:18:00.251 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (92ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Leads] AS [l])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-06-24 11:18:00.901 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/  
+2018-06-24 22:24:19.710 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\Rohit_PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-24 22:24:19.914 +05:30 [Information] start: Executing Configure Method
+2018-06-24 22:24:21.723 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-24 22:24:22.534 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (144ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2018-06-24 22:28:21.642 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\Rohit_PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-24 22:28:21.757 +05:30 [Information] start: Executing Configure Method
+2018-06-24 22:28:23.536 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-24 22:28:49.912 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\Rohit_PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-24 22:28:50.033 +05:30 [Information] start: Executing Configure Method
+2018-06-24 22:28:51.816 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-24 22:29:46.173 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\Rohit_PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-24 22:29:46.306 +05:30 [Information] start: Executing Configure Method
+2018-06-24 22:31:21.776 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\Rohit_PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-24 22:31:21.900 +05:30 [Information] start: Executing Configure Method
+2018-06-24 22:31:23.653 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-24 22:31:36.806 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (956ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [TravelCRM];
+2018-06-24 22:31:36.922 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (104ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TravelCRM] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2018-06-24 22:31:37.150 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2018-06-24 22:31:37.233 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (77ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2018-06-24 22:31:37.244 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-06-24 22:31:37.278 +05:30 [Information] Microsoft.EntityFrameworkCore.Migrations: Applying migration '20180624165852_Initial'.
+2018-06-24 22:31:37.399 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Customers] (
+    [CreatedDate] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [CustomerID] nvarchar(450) NOT NULL,
+    [FirstName] nvarchar(max) NULL,
+    [LastName] nvarchar(max) NULL,
+    [EmailID] nvarchar(max) NULL,
+    [MobileNUmber] int NOT NULL,
+    CONSTRAINT [PK_Customers] PRIMARY KEY ([CustomerID])
+);
+2018-06-24 22:31:37.401 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [CreatedDate] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [RoleID] int NOT NULL IDENTITY,
+    [RoleName] nvarchar(max) NULL,
+    [Active] int NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([RoleID])
+);
+2018-06-24 22:31:37.404 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Team] (
+    [CreatedDate] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [TeamId] int NOT NULL IDENTITY,
+    [TeamName] nvarchar(max) NULL,
+    [ManagerName] nvarchar(max) NULL,
+    [ManagerID] int NOT NULL,
+    CONSTRAINT [PK_Team] PRIMARY KEY ([TeamId])
+);
+2018-06-24 22:31:37.407 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Employees] (
+    [CreatedDate] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [EmployeeID] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(max) NULL,
+    [LastName] nvarchar(max) NULL,
+    [EmailID] nvarchar(max) NULL,
+    [MobileNUmber] int NOT NULL,
+    [DOB] datetime2 NOT NULL,
+    [Active] int NOT NULL,
+    [RoleID] int NOT NULL,
+    CONSTRAINT [PK_Employees] PRIMARY KEY ([EmployeeID]),
+    CONSTRAINT [FK_Employees_Roles_RoleID] FOREIGN KEY ([RoleID]) REFERENCES [Roles] ([RoleID]) ON DELETE CASCADE
+);
+2018-06-24 22:31:37.412 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Permission] (
+    [RoleID] int NOT NULL,
+    [ControllerName] nvarchar(450) NOT NULL,
+    [ActionName] nvarchar(450) NOT NULL,
+    [PermissionSet] nvarchar(max) NULL,
+    CONSTRAINT [PK_Permission] PRIMARY KEY ([RoleID], [ControllerName], [ActionName]),
+    CONSTRAINT [FK_Permission_Roles_RoleID] FOREIGN KEY ([RoleID]) REFERENCES [Roles] ([RoleID]) ON DELETE CASCADE
+);
+2018-06-24 22:31:37.418 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Leads] (
+    [CreatedDate] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [LeadID] int NOT NULL IDENTITY,
+    [LeadSource] nvarchar(max) NULL,
+    [ModifiedTime] datetime2 NULL,
+    [JourneySource] nvarchar(max) NULL,
+    [JourneyDestination] nvarchar(max) NULL,
+    [Budget] float NOT NULL,
+    [CurrentStatus] int NOT NULL,
+    [ModeOfTravel] int NOT NULL,
+    [TeamId] int NOT NULL,
+    [StayPeriod] nvarchar(max) NULL,
+    CONSTRAINT [PK_Leads] PRIMARY KEY ([LeadID]),
+    CONSTRAINT [FK_Leads_Team_TeamId] FOREIGN KEY ([TeamId]) REFERENCES [Team] ([TeamId]) ON DELETE CASCADE
+);
+2018-06-24 22:31:37.444 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [UserName] nvarchar(450) NOT NULL,
+    [Password] nvarchar(max) NULL,
+    [Role] nvarchar(max) NULL,
+    [IsLoggedIn] bit NOT NULL,
+    [SecretCode] nvarchar(max) NULL,
+    [EmployeeID] nvarchar(max) NULL,
+    [EmployeeID1] int NULL,
+    [RoleID] int NOT NULL,
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([UserName]),
+    CONSTRAINT [FK_ApplicationUsers_Employees_EmployeeID1] FOREIGN KEY ([EmployeeID1]) REFERENCES [Employees] ([EmployeeID]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_ApplicationUsers_Roles_RoleID] FOREIGN KEY ([RoleID]) REFERENCES [Roles] ([RoleID]) ON DELETE CASCADE
+);
+2018-06-24 22:31:37.451 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [CustomerEnquiryDetails] (
+    [EnquiryID] int NOT NULL IDENTITY,
+    [CustomerID] int NOT NULL,
+    [EmployeeID] int NOT NULL,
+    [LeadID] int NOT NULL,
+    [Loaction] nvarchar(max) NULL,
+    [TravelSource] nvarchar(max) NULL,
+    [TravelDestination] nvarchar(max) NULL,
+    [TraveCategory] nvarchar(max) NULL,
+    [AccomdationCategory] nvarchar(max) NULL,
+    [TourCategory] nvarchar(max) NULL,
+    [TravelExpectedDate] datetime2 NULL,
+    [Budget] float NOT NULL,
+    [Status] int NOT NULL,
+    [CustomerID1] nvarchar(450) NULL,
+    CONSTRAINT [PK_CustomerEnquiryDetails] PRIMARY KEY ([EnquiryID]),
+    CONSTRAINT [FK_CustomerEnquiryDetails_Customers_CustomerID1] FOREIGN KEY ([CustomerID1]) REFERENCES [Customers] ([CustomerID]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_CustomerEnquiryDetails_Employees_EmployeeID] FOREIGN KEY ([EmployeeID]) REFERENCES [Employees] ([EmployeeID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_CustomerEnquiryDetails_Leads_LeadID] FOREIGN KEY ([LeadID]) REFERENCES [Leads] ([LeadID]) ON DELETE CASCADE
+);
+2018-06-24 22:31:37.621 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [LeadEmployeeMapper] (
+    [CreatedDate] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [LeadEmployeeMapperID] int NOT NULL IDENTITY,
+    [LeadID] int NOT NULL,
+    [EmployeeID] int NOT NULL,
+    [Level] int NOT NULL,
+    CONSTRAINT [PK_LeadEmployeeMapper] PRIMARY KEY ([LeadEmployeeMapperID]),
+    CONSTRAINT [FK_LeadEmployeeMapper_Employees_EmployeeID] FOREIGN KEY ([EmployeeID]) REFERENCES [Employees] ([EmployeeID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_LeadEmployeeMapper_Leads_LeadID] FOREIGN KEY ([LeadID]) REFERENCES [Leads] ([LeadID]) ON DELETE CASCADE
+);
+2018-06-24 22:31:37.622 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_ApplicationUsers_EmployeeID1] ON [ApplicationUsers] ([EmployeeID1]);
+2018-06-24 22:34:42.971 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\Rohit_PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-24 22:34:43.621 +05:30 [Information] start: Executing Configure Method
+2018-06-24 22:35:07.803 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-24 22:35:08.457 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (168ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2018-06-24 22:35:08.918 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Leads] AS [l])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-06-24 22:35:13.346 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/  
+2018-06-24 22:35:15.087 +05:30 [Warning] Microsoft.AspNetCore.Server.Kestrel: Heartbeat took longer than "00:00:01" at "06/24/2018 17:05:15 +00:00".
+2018-06-24 22:35:19.660 +05:30 [Information] Microsoft.AspNetCore.Authorization.DefaultAuthorizationService: Authorization failed for user: (null).
+2018-06-24 22:35:19.665 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-06-24 22:35:19.678 +05:30 [Information] Microsoft.AspNetCore.Mvc.ChallengeResult: Executing ChallengeResult with authentication schemes ().
+2018-06-24 22:35:19.716 +05:30 [Information] Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler: AuthenticationScheme: Cookies was challenged.
+2018-06-24 22:35:19.722 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.HomeController.Index (TravelCRM) in 5852.9546ms
+2018-06-24 22:35:19.778 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 6444.3494ms 302 
+2018-06-24 22:35:19.794 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Login/Account/Login?ReturnUrl=%2F  
+2018-06-24 22:35:19.968 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) with arguments (/) - ModelState is Valid
+2018-06-24 22:35:23.412 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor: Executing ViewResult, running view at path /Areas/Login/Views/Account/Login.cshtml.
+2018-06-24 22:35:23.620 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) in 3772.0178ms
+2018-06-24 22:35:23.630 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 3833.518ms 200 text/html; charset=utf-8
+2018-06-24 22:35:34.741 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 POST http://localhost:50310/Login/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 0
+2018-06-24 22:35:34.873 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) with arguments (TravelCRM.Models.AccountViewModel.LoginViewModel, /) - ModelState is Invalid
+2018-06-24 22:35:34.889 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-24 22:35:34.976 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) in 188.129ms
+2018-06-24 22:35:35.072 +05:30 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TravelCRMServices.LoginService.LoginUser(ApplicationUser User) in C:\Users\Rohit_PC\source\repos\TravelCRMServices\LoginService.cs:line 28
+   at TravelCRM.Controllers.Login.AccountController.<Login>d__7.MoveNext() in C:\Users\Rohit_PC\source\repos\TravelCRM\TravelCRM\Areas\Login\Controller\AccountController.cs:line 47
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-06-24 22:35:35.431 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 678.8499ms 500 text/html; charset=utf-8
+2018-06-24 22:36:55.451 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\Rohit_PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-24 22:36:55.731 +05:30 [Information] start: Executing Configure Method
+2018-06-24 22:37:00.346 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-24 22:37:00.904 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (100ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+2018-06-24 22:37:01.379 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Leads] AS [l])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-06-24 22:37:02.040 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/  
+2018-06-24 22:37:04.601 +05:30 [Information] Microsoft.AspNetCore.Authorization.DefaultAuthorizationService: Authorization failed for user: (null).
+2018-06-24 22:37:04.604 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-06-24 22:37:04.615 +05:30 [Information] Microsoft.AspNetCore.Mvc.ChallengeResult: Executing ChallengeResult with authentication schemes ().
+2018-06-24 22:37:04.658 +05:30 [Information] Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler: AuthenticationScheme: Cookies was challenged.
+2018-06-24 22:37:04.667 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.HomeController.Index (TravelCRM) in 2095.3036ms
+2018-06-24 22:37:04.757 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 2717.9043ms 302 
+2018-06-24 22:37:04.765 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Login/Account/Login?ReturnUrl=%2F  
+2018-06-24 22:37:05.057 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) with arguments (/) - ModelState is Valid
+2018-06-24 22:37:08.721 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor: Executing ViewResult, running view at path /Areas/Login/Views/Account/Login.cshtml.
+2018-06-24 22:37:08.920 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) in 4071.0141ms
+2018-06-24 22:37:08.932 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 4167.353ms 200 text/html; charset=utf-8
+2018-06-24 22:37:17.023 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 POST http://localhost:50310/Login/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 0
+2018-06-24 22:37:17.178 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) with arguments (TravelCRM.Models.AccountViewModel.LoginViewModel, /) - ModelState is Invalid
+2018-06-24 22:37:24.909 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None

@@ -17,6 +17,24 @@ namespace TravelCRMServices
 
         }
 
+        public Employee AddEmployee(Employee employee)
+        {
+            Employee Localemp=null;
+
+            if (employee != null)
+            {
+                Localemp = unitOfWork.EmployeeRepository.Add(employee);
+                unitOfWork.Commit();
+            }
+
+            return Localemp;
+        }
+
+
+        
+
+
+
         public LeadEmployeeMapper AssignLeadToEmployee(int LeadID,int ManagerID,int employeeID)
         {
 
@@ -26,6 +44,9 @@ namespace TravelCRMServices
             return entity;
         }
 
-        
+        public IEnumerable<Employee> GetEmployees()
+        {
+            return unitOfWork.EmployeeRepository.GetAll();
+        }
     }
 }

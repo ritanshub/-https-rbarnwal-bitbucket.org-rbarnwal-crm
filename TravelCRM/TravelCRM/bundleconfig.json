@@ -9,45 +9,6 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/Content/navigation.js",
-    // An array of relative input file paths. Globbing patterns supported
-    "inputFiles": [
-      "wwwroot/Content/jquery/jquery/dist/jquery.js",
-      "wwwroot/Content/jquery/bootstrap/dist/js/bootstrap.js",
-      "wwwroot/Scripts/ui-load.js",
-      "wwwroot/Scripts/ui-jp.config.js",
-      "wwwroot/Scripts/ui-jp.js",
-      "wwwroot/Scripts/ui-nav.js",
-      "wwwroot/Scripts/ui-toggle.js",
-      "wwwroot/Scripts/ui-client.js"
-    ]
-  },
-  {
-    "outputFileName": "wwwroot/Script/mordernizer.js",
-    // An array of relative input file paths. Globbing patterns supported
-    "inputFiles": [
-      "wwwroot/Scripts/modernizr-2.6.2.js"
-    ]
-  },
-  {
-    "outputFileName": "wwwroot/Content/bundle.css",
-    "inputFiles": [
-      "wwwroot/Content/assets/animate.css/animate.css",
-      "wwwroot/Content/assets/font-awesome/css/font-awesome.min.css",
-      "wwwroot/Content/assets/simple-line-icons/css/simple-line-icons.css",
-      "wwwroot/Content/jquery/bootstrap/dist/css/bootstrap.css",
-      "wwwroot/Content/font.css",
-      "wwwroot/Content/app.css"
-    ]
-  },
-  {
-    "outputFileName": "wwwroot/css/bootstrapbundle.js",
-    "inputFiles": [
-      "~/Scripts/bootstrap.js",
-      "~/Scripts/respond.js"
-    ]
-  },
-  {
     "outputFileName": "wwwroot/js/site.min.js",
     "inputFiles": [
       "wwwroot/js/site.js"

@@ -14,6 +14,7 @@ using TravelCRMData;
 using TravelCRMServices;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using AutoMapper;
 
 namespace TravelCRM
 {
@@ -48,7 +49,7 @@ namespace TravelCRM
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-
+            services.AddAutoMapper();
             services.AddMvc();
         }
 
@@ -74,7 +75,7 @@ namespace TravelCRM
             app.UseStaticFiles();
 
             app.UseAuthentication();
-
+           
             app.UseMvc(routes =>
 
             {

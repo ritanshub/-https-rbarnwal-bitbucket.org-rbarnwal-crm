@@ -3614,40 +3614,43 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RICHA\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Rohit_PC\\.nuget\\packages\\": {},
+    "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "D:\\POC\\repos\\TravelCRMServices\\TravelCRMServices.csproj",
+      "projectUniqueName": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRMServices\\TravelCRMServices.csproj",
       "projectName": "TravelCRMServices",
-      "projectPath": "D:\\POC\\repos\\TravelCRMServices\\TravelCRMServices.csproj",
-      "packagesPath": "C:\\Users\\RICHA\\.nuget\\packages\\",
-      "outputPath": "D:\\POC\\repos\\TravelCRMServices\\obj\\",
+      "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRMServices\\TravelCRMServices.csproj",
+      "packagesPath": "C:\\Users\\Rohit_PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRMServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RICHA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Rohit_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\POC\\repos\\TravelCRM\\TravelCRMEntities\\TravelCRMEntities.csproj": {
-              "projectPath": "D:\\POC\\repos\\TravelCRM\\TravelCRMEntities\\TravelCRMEntities.csproj"
+            "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj": {
+              "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj"
             },
-            "D:\\POC\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj": {
-              "projectPath": "D:\\POC\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj"
+            "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRMEntities\\TravelCRMEntities.csproj": {
+              "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRMEntities\\TravelCRMEntities.csproj"
             }
           }
         }
@@ -3664,7 +3667,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
           }
         },

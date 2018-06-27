@@ -664,30 +664,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RICHA\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Rohit_PC\\.nuget\\packages\\": {},
+    "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "D:\\POC\\repos\\TravelCRM\\ApplicationCore\\ApplicationCore.csproj",
+      "projectUniqueName": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ApplicationCore\\ApplicationCore.csproj",
       "projectName": "ApplicationCore",
-      "projectPath": "D:\\POC\\repos\\TravelCRM\\ApplicationCore\\ApplicationCore.csproj",
-      "packagesPath": "C:\\Users\\RICHA\\.nuget\\packages\\",
-      "outputPath": "D:\\POC\\repos\\TravelCRM\\ApplicationCore\\obj\\",
+      "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ApplicationCore\\ApplicationCore.csproj",
+      "packagesPath": "C:\\Users\\Rohit_PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RICHA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Rohit_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -707,7 +710,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
           }
         },

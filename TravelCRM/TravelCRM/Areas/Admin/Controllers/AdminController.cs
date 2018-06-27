@@ -7,6 +7,7 @@ using TravelCRM.ApplicationCore;
 using TravelCRMServices;
 using TravelCRMEntities;
 using Microsoft.Extensions.Logging;
+using AutoMapper;
 
 namespace TravelCRM.Controllers.Admin
 {
@@ -18,19 +19,22 @@ namespace TravelCRM.Controllers.Admin
         private ILeadService m_leadService { get; set; }
 
         private ITeam m_teamService { get; set; }
-
+        private readonly IMapper _mapper;
 
         private readonly ILogger<AdminController> _logger;
 
         public AdminController(IAdminOperationService adminService,
             ILeadService leadservice,
             ITeam teamservice,
+            IMapper mapper,
             ILogger<AdminController> logger) :base()
         {
             this.m_adminOperationService = adminService;
             this._logger = logger;
             this.m_leadService = leadservice;
             this.m_teamService = teamservice;
+            this._mapper = mapper;
+            
         }
 
 

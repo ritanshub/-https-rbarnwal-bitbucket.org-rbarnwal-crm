@@ -2,13 +2,29 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "DataAnnotationValidator/1.0.0.1": {
+      "AutoMapper/7.0.1": {
         "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
         "compile": {
-          "lib/net451/DataAnnotationValidator.dll": {}
+          "lib/netcoreapp2.0/AutoMapper.dll": {}
         },
         "runtime": {
-          "lib/net451/DataAnnotationValidator.dll": {}
+          "lib/netcoreapp2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "7.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -4918,7 +4934,7 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {}
         }
       },
-      "System.ValueTuple/4.4.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -5080,6 +5096,16 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
+      "MenuManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MenuManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MenuManager.dll": {}
+        }
+      },
       "TravelCRMData/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -5137,15 +5163,35 @@
     }
   },
   "libraries": {
-    "DataAnnotationValidator/1.0.0.1": {
-      "sha512": "d03D7zh9re+5GPJIacrnjMuTZgfKCdeGp0E+CfNHl0p/jHnxmmyx9AjpmK4TEZXI6pm6aJ1CZScj2OFzDJjbxQ==",
+    "AutoMapper/7.0.1": {
+      "sha512": "6xHbhsW09sWjjYuE1sqhYn25PQzB6UEUVPME5uhlaIz2NR2+L3+FGbVxvknJKug1BLp6VTLxDb5RcGXKMm0ieQ==",
       "type": "package",
-      "path": "dataannotationvalidator/1.0.0.1",
+      "path": "automapper/7.0.1",
       "files": [
-        "content/License.txt",
-        "dataannotationvalidator.1.0.0.1.nupkg.sha512",
-        "dataannotationvalidator.nuspec",
-        "lib/net451/DataAnnotationValidator.dll"
+        "automapper.7.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.pdb",
+        "lib/net45/AutoMapper.xml",
+        "lib/netcoreapp2.0/AutoMapper.dll",
+        "lib/netcoreapp2.0/AutoMapper.pdb",
+        "lib/netcoreapp2.0/AutoMapper.xml",
+        "lib/netstandard1.3/AutoMapper.dll",
+        "lib/netstandard1.3/AutoMapper.pdb",
+        "lib/netstandard1.3/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.pdb",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/4.0.1": {
+      "sha512": "Fhl+XDdcR2ogcqyHIeTB5fGCB58wTXOdpiqDI4sh/durRx8LJw+QJw2ZGLO3DIXTPvvnHM/t0DZy0vf0cdIGEg==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/4.0.1",
+      "files": [
+        "automapper.extensions.microsoft.dependencyinjection.4.0.1.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
     "Libuv/1.10.0": {
@@ -11680,7 +11726,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
+      "sha512": "y2cbgOx0QMrz6U4dkW4zKj58ZkzvNk+6nZOajr9Z41dZCJ7GTKhABSgxkCGQVPbecVtst0XkRV4WYlxnb6jNxA==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -12941,11 +12987,12 @@
         "system.threading.timer.nuspec"
       ]
     },
-    "System.ValueTuple/4.4.0": {
-      "sha512": "BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+    "System.ValueTuple/4.5.0": {
+      "sha512": "xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
       "type": "package",
-      "path": "system.valuetuple/4.4.0",
+      "path": "system.valuetuple/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -12960,6 +13007,7 @@
         "lib/netstandard2.0/_._",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -12967,18 +13015,16 @@
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net461/System.ValueTuple.dll",
-        "ref/net461/System.ValueTuple.xml",
         "ref/net47/System.ValueTuple.dll",
-        "ref/net47/System.ValueTuple.xml",
         "ref/netcoreapp2.0/_._",
         "ref/netstandard2.0/_._",
         "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.valuetuple.4.4.0.nupkg.sha512",
+        "system.valuetuple.4.5.0.nupkg.sha512",
         "system.valuetuple.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -13324,6 +13370,11 @@
         "windowsazure.storage.nuspec"
       ]
     },
+    "MenuManager/1.0.0": {
+      "type": "project",
+      "path": "../ManuManager/MenuManager.csproj",
+      "msbuildProject": "../ManuManager/MenuManager.csproj"
+    },
     "TravelCRMData/1.0.0": {
       "type": "project",
       "path": "../TravelCRMData/TravelCRMData.csproj",
@@ -13347,7 +13398,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "DataAnnotationValidator >= 1.0.0.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 4.0.1",
+      "MenuManager >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.Extensions.DependencyInjection >= 2.1.1",
       "Microsoft.NETCore.App >= 2.0.0",
@@ -13358,40 +13410,46 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RICHA\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Rohit_PC\\.nuget\\packages\\": {},
+    "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "D:\\POC\\repos\\TravelCRM\\TravelCRM\\TravelCRM.csproj",
+      "projectUniqueName": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRM\\TravelCRM.csproj",
       "projectName": "TravelCRM",
-      "projectPath": "D:\\POC\\repos\\TravelCRM\\TravelCRM\\TravelCRM.csproj",
-      "packagesPath": "C:\\Users\\RICHA\\.nuget\\packages\\",
-      "outputPath": "D:\\POC\\repos\\TravelCRM\\TravelCRM\\obj\\",
+      "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRM\\TravelCRM.csproj",
+      "packagesPath": "C:\\Users\\Rohit_PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRM\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RICHA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Rohit_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\POC\\repos\\TravelCRMServices\\TravelCRMServices.csproj": {
-              "projectPath": "D:\\POC\\repos\\TravelCRMServices\\TravelCRMServices.csproj"
+            "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj": {
+              "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj"
             },
-            "D:\\POC\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj": {
-              "projectPath": "D:\\POC\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj"
+            "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRMServices\\TravelCRMServices.csproj": {
+              "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRMServices\\TravelCRMServices.csproj"
+            },
+            "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj": {
+              "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj"
             }
           }
         }
@@ -13405,30 +13463,30 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "DataAnnotationValidator": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "[1.0.0.1, )"
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "[2.0.0, )"
-          },
-          "Microsoft.Extensions.DependencyInjection": {
-            "target": "Package",
-            "version": "[2.1.1, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
+            "version": "4.0.1"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[2.0.0, )"
+            "version": "2.0.0"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "2.1.1"
           },
           "NetEscapades.Extensions.Logging.RollingFile": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "1.0.0"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.0"
           }
         },
         "imports": [
@@ -13438,17 +13496,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'DataAnnotationValidator 1.0.0.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
-      "libraryId": "DataAnnotationValidator",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

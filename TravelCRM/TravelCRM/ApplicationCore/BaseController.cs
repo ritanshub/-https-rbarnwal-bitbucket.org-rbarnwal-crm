@@ -7,20 +7,22 @@ using Microsoft.Extensions.Logging;
 using System.Security.Claims;
 using TravelCRM.Controllers.Admin;
 using TravelCRM.Areas.Employee;
+using AutoMapper;
 
 namespace TravelCRM.ApplicationCore
 {
     public class BaseController<T> : Controller where T : class
     {
-        public BaseController()
-        {
-        }
+       
 
         public BaseController(ILogger<T> logger)
         {
 
         }
 
+        public BaseController()
+        {
+        }
 
         protected RedirectToActionResult RedirectToLandingPage(string returnUrl=null)
         {
@@ -31,7 +33,7 @@ namespace TravelCRM.ApplicationCore
                 return RedirectToAction(nameof(AdminController.DasBoard), "Admin", new { area = "Admin" });
 
             if (Role == "Employee")
-                return RedirectToAction(nameof(LeadController.DashBoard), "Employee", new { area = "Employee" });
+                return RedirectToAction(nameof(EmployeeController.DashBoard), "Employee", new { area = "Employee" });
 
 
             return RedirectToAction("", "Home");

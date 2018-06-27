@@ -11,17 +11,3 @@ C:\Users\Rohit_PC\source\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\T
 C:\Users\Rohit_PC\source\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.AssemblyInfo.cs
 C:\Users\Rohit_PC\source\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.dll
 C:\Users\Rohit_PC\source\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.pdb
-D:\POC\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.deps.json
-D:\POC\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.runtimeconfig.json
-D:\POC\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.runtimeconfig.dev.json
-D:\POC\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.dll
-D:\POC\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.pdb
-D:\POC\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMEntities.dll
-D:\POC\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMEntities.pdb
-D:\POC\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.csprojAssemblyReference.cache
-D:\POC\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.csproj.CoreCompileInputs.cache
-D:\POC\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.AssemblyInfoInputs.cache
-D:\POC\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.AssemblyInfo.cs
-D:\POC\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.csproj.CopyComplete
-D:\POC\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.dll
-D:\POC\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.pdb

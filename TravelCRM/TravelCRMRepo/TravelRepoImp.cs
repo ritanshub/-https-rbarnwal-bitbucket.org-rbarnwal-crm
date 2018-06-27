@@ -8,10 +8,11 @@ using TravelCRMData;
 
 namespace TravelCRMRepo
 {
-        public class Repository<T> : IRepository<T> where T : class   {
+        public class Repository<T> : IRepository<T> where T : BaseEntities   {
             private readonly ApplicationContext context;
             private DbSet<T> entities;
-            string errorMessage = string.Empty;
+        
+        string errorMessage = string.Empty;
 
             public Repository(ApplicationContext context)
             {
@@ -54,12 +55,12 @@ namespace TravelCRMRepo
                 }
                 entities.Remove(entity);
             }
-             public T Add(T t)
+            public T Add(T t)
           {
 
-            entities.Add(t);
-            context.SaveChanges();
-            return t;
+             entities.Add(t);
+
+             return t;
           }
 
         public T Get(Expression<Func<T, bool>> where)
@@ -112,6 +113,11 @@ namespace TravelCRMRepo
         public T GetById(string id)
         {
             return entities.Find(id);
+        }
+
+        public IEnumerable<T> GetManyUsingFunc(Func<T, bool> where)
+        {
+          return  entities.Where(where);
         }
     }
 }

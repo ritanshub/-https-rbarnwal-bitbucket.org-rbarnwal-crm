@@ -8,25 +8,28 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using TravelCRMServices;
 using TravelCRMEntities;
 using Microsoft.Extensions.Logging;
-using TravelCRM.Areas.Login.Model;
-using System.Collections.Generic;
-using System;
-using TravelCRM.Areas.Employee.Model;
+using AutoMapper;
 
 namespace TravelCRM.Controllers.Login
 {
     [Area("Login")]
     public class AccountController : BaseController<AccountController>
     {
+
+        // _mapper.Map<TypeIWantToMapTo>(originalObject);
+
         private ILoginService m_loginService { get; set; }
         private readonly ILogger<AccountController> m_logger;
+        private readonly IMapper _mapper;
 
-        public AccountController(ILoginService loginservice, ILogger<AccountController> logger) : base()
+        public AccountController(ILoginService loginservice, 
+            ILogger<AccountController> logger,IMapper mapper) : base()
         {
 
             this.m_loginService = loginservice;
             this.m_logger = logger;
-
+            this._mapper = mapper;
+           
         }
 
 
@@ -87,31 +90,5 @@ namespace TravelCRM.Controllers.Login
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction(nameof(AccountController.Login), "Account", new { area = "Login" });
         }
-
-        List<UserViewModel> _user = new List<UserViewModel> {
-               new UserViewModel { EmployeeID = 1, FirstName = "Ankur", LastName = "barnwal",EmailID="ashishbzz05@gmail.com",MobileNUmber=34,DOB=DateTime.Now},
-                     new UserViewModel { EmployeeID = 2, FirstName = "Ashish", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber = 34,DOB=DateTime.Now},
-               new UserViewModel { EmployeeID = 3, FirstName = "Rajesh", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber =43,DOB=DateTime.Now},
-               new UserViewModel { EmployeeID = 4, FirstName = "Tanya", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber = 43,DOB=DateTime.Now},
-               new UserViewModel { EmployeeID = 5, FirstName = "Akash", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com", MobileNUmber = 5,DOB=DateTime.Now},
-               new UserViewModel { EmployeeID = 6, FirstName = "Golu", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com",MobileNUmber = 4,DOB=DateTime.Now},
-               new UserViewModel { EmployeeID = 7, FirstName = "Ramesh", LastName = "barnwal", EmailID = "ashishbzz05@gmail.com",MobileNUmber =6,DOB=DateTime.Now}
-        };
-
-        [HttpGet]
-        public ActionResult GetUserProfile(int id)
-        {
-            
-            UserViewModel user = _user.Find(x => x.EmployeeID == id);
-            return View("Profile",user);
-        }
-
-        [HttpGet]
-        public ActionResult GetHelp(int id)
-        {
-            return View("Help");
-        }
-
-
     }
 }

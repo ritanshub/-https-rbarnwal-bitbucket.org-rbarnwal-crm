@@ -22,6 +22,7 @@ namespace TravelCRMData
             {
            
             };
+            
             foreach (Lead L in Leads)
             {
                 context.Leads.Add(L);

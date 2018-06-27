@@ -1,0 +1,8 @@
+C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.csproj.CoreCompileInputs.cache
+C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.AssemblyInfoInputs.cache
+C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.AssemblyInfo.cs
+C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.deps.json
+C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.dll
+C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.pdb
+C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.dll
+C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.pdb

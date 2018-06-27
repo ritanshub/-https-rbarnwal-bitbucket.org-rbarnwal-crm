@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationCore", "Applicat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelCRMRepo", "TravelCRMRepo\TravelCRMRepo.csproj", "{D3DA216E-4127-4FA9-82CB-9CBD6D5A2DBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManuManager", "ManuManager\ManuManager.csproj", "{880B19D5-481A-436A-B3A6-AD54456FF116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuManager", "ManuManager\MenuManager.csproj", "{880B19D5-481A-436A-B3A6-AD54456FF116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "Security\Security.csproj", "{4DF207E0-08B5-465F-BCCA-ADB0A0EC3F72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{880B19D5-481A-436A-B3A6-AD54456FF116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{880B19D5-481A-436A-B3A6-AD54456FF116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{880B19D5-481A-436A-B3A6-AD54456FF116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DF207E0-08B5-465F-BCCA-ADB0A0EC3F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF207E0-08B5-465F-BCCA-ADB0A0EC3F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF207E0-08B5-465F-BCCA-ADB0A0EC3F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF207E0-08B5-465F-BCCA-ADB0A0EC3F72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

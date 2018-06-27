@@ -1,0 +1,8 @@
+C:\Users\Rohit_PC\source\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.deps.json
+C:\Users\Rohit_PC\source\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.dll
+C:\Users\Rohit_PC\source\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.csproj.CoreCompileInputs.cache
+C:\Users\Rohit_PC\source\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.AssemblyInfoInputs.cache
+C:\Users\Rohit_PC\source\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.AssemblyInfo.cs
+C:\Users\Rohit_PC\source\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.pdb
+C:\Users\Rohit_PC\source\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.dll
+C:\Users\Rohit_PC\source\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.pdb
