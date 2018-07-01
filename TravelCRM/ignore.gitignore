@@ -1,0 +1,6 @@
+# ignore all logs
+*.log
+# ignore all pdb
+*.pdb
+# ignore all dlls
+*.dll
