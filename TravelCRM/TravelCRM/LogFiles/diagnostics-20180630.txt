@@ -1,0 +1,255 @@
+2018-06-30 17:41:21.451 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\Richa\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-06-30 17:41:21.513 +05:30 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: Creating key {def6242d-7f4e-417c-9c18-6ccabc91cba6} with creation date 2018-06-30 12:11:21Z, activation date 2018-06-30 12:11:21Z, and expiration date 2018-09-28 12:11:21Z.
+2018-06-30 17:41:21.931 +05:30 [Information] Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository: Writing data to file 'C:\Users\Richa\AppData\Local\ASP.NET\DataProtection-Keys\key-def6242d-7f4e-417c-9c18-6ccabc91cba6.xml'.
+2018-06-30 17:41:22.331 +05:30 [Information] start: Executing Configure Method
+2018-06-30 17:41:26.645 +05:30 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-06-30 17:41:40.352 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (2,208ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [TravelCRM];
+2018-06-30 17:41:41.502 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (1,128ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TravelCRM] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2018-06-30 17:41:41.951 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (116ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Customers] (
+    [CreatedBy] nvarchar(max) NULL,
+    [CreatedDate] datetime2 NULL,
+    [CustomerID] nvarchar(450) NOT NULL,
+    [FirstName] nvarchar(max) NULL,
+    [LastName] nvarchar(max) NULL,
+    [EmailID] nvarchar(max) NULL,
+    [MobileNUmber] int NOT NULL,
+    CONSTRAINT [PK_Customers] PRIMARY KEY ([CustomerID])
+);
+2018-06-30 17:41:41.982 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [CreatedBy] nvarchar(max) NULL,
+    [CreatedDate] datetime2 NULL,
+    [RoleID] int NOT NULL IDENTITY,
+    [RoleName] nvarchar(max) NULL,
+    [Active] int NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([RoleID])
+);
+2018-06-30 17:41:42.001 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Team] (
+    [CreatedBy] nvarchar(max) NULL,
+    [CreatedDate] datetime2 NULL,
+    [TeamId] int NOT NULL IDENTITY,
+    [TeamName] nvarchar(max) NULL,
+    [ManagerName] nvarchar(max) NULL,
+    [ManagerID] int NOT NULL,
+    CONSTRAINT [PK_Team] PRIMARY KEY ([TeamId])
+);
+2018-06-30 17:41:42.037 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Employees] (
+    [CreatedBy] nvarchar(max) NULL,
+    [CreatedDate] datetime2 NULL,
+    [EmployeeID] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(max) NULL,
+    [LastName] nvarchar(max) NULL,
+    [EmailID] nvarchar(max) NULL,
+    [MobileNUmber] int NOT NULL,
+    [DOB] datetime2 NOT NULL,
+    [Active] int NOT NULL,
+    [RoleID] int NOT NULL,
+    CONSTRAINT [PK_Employees] PRIMARY KEY ([EmployeeID]),
+    CONSTRAINT [FK_Employees_Roles_RoleID] FOREIGN KEY ([RoleID]) REFERENCES [Roles] ([RoleID]) ON DELETE CASCADE
+);
+2018-06-30 17:41:42.063 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Permission] (
+    [CreatedBy] nvarchar(max) NULL,
+    [CreatedDate] datetime2 NULL,
+    [RoleID] int NOT NULL,
+    [ControllerName] nvarchar(450) NOT NULL,
+    [ActionName] nvarchar(450) NOT NULL,
+    [PermissionSet] nvarchar(max) NULL,
+    CONSTRAINT [PK_Permission] PRIMARY KEY ([RoleID], [ControllerName], [ActionName]),
+    CONSTRAINT [FK_Permission_Roles_RoleID] FOREIGN KEY ([RoleID]) REFERENCES [Roles] ([RoleID]) ON DELETE CASCADE
+);
+2018-06-30 17:41:42.084 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Leads] (
+    [CreatedBy] nvarchar(max) NULL,
+    [CreatedDate] datetime2 NULL,
+    [LeadID] int NOT NULL IDENTITY,
+    [LeadSource] nvarchar(max) NULL,
+    [ModifiedTime] datetime2 NULL,
+    [JourneySource] nvarchar(max) NULL,
+    [JourneyDestination] nvarchar(max) NULL,
+    [Budget] float NOT NULL,
+    [CurrentStatus] int NOT NULL,
+    [ModeOfTravel] int NOT NULL,
+    [TeamId] int NOT NULL,
+    [StayPeriod] nvarchar(max) NULL,
+    CONSTRAINT [PK_Leads] PRIMARY KEY ([LeadID]),
+    CONSTRAINT [FK_Leads_Team_TeamId] FOREIGN KEY ([TeamId]) REFERENCES [Team] ([TeamId]) ON DELETE CASCADE
+);
+2018-06-30 17:41:42.106 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [CreatedBy] nvarchar(max) NULL,
+    [CreatedDate] datetime2 NULL,
+    [UserName] nvarchar(450) NOT NULL,
+    [Password] nvarchar(max) NULL,
+    [Role] nvarchar(max) NULL,
+    [IsLoggedIn] bit NOT NULL,
+    [SecretCode] nvarchar(max) NULL,
+    [EmployeeID] nvarchar(max) NULL,
+    [EmployeeID1] int NULL,
+    [RoleID] int NOT NULL,
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([UserName]),
+    CONSTRAINT [FK_ApplicationUsers_Employees_EmployeeID1] FOREIGN KEY ([EmployeeID1]) REFERENCES [Employees] ([EmployeeID]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_ApplicationUsers_Roles_RoleID] FOREIGN KEY ([RoleID]) REFERENCES [Roles] ([RoleID]) ON DELETE CASCADE
+);
+2018-06-30 17:41:42.125 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [CustomerEnquiryDetails] (
+    [EnquiryID] int NOT NULL IDENTITY,
+    [CustomerID] int NOT NULL,
+    [EmployeeID] int NOT NULL,
+    [LeadID] int NOT NULL,
+    [Loaction] nvarchar(max) NULL,
+    [TravelSource] nvarchar(max) NULL,
+    [TravelDestination] nvarchar(max) NULL,
+    [TraveCategory] nvarchar(max) NULL,
+    [AccomdationCategory] nvarchar(max) NULL,
+    [TourCategory] nvarchar(max) NULL,
+    [TravelExpectedDate] datetime2 NULL,
+    [Budget] float NOT NULL,
+    [Status] int NOT NULL,
+    [CustomerID1] nvarchar(450) NULL,
+    CONSTRAINT [PK_CustomerEnquiryDetails] PRIMARY KEY ([EnquiryID]),
+    CONSTRAINT [FK_CustomerEnquiryDetails_Customers_CustomerID1] FOREIGN KEY ([CustomerID1]) REFERENCES [Customers] ([CustomerID]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_CustomerEnquiryDetails_Employees_EmployeeID] FOREIGN KEY ([EmployeeID]) REFERENCES [Employees] ([EmployeeID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_CustomerEnquiryDetails_Leads_LeadID] FOREIGN KEY ([LeadID]) REFERENCES [Leads] ([LeadID]) ON DELETE CASCADE
+);
+2018-06-30 17:41:42.146 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [LeadEmployeeMapper] (
+    [CreatedBy] nvarchar(max) NULL,
+    [CreatedDate] datetime2 NULL,
+    [LeadEmployeeMapperID] int NOT NULL IDENTITY,
+    [LeadID] int NOT NULL,
+    [EmployeeID] int NOT NULL,
+    [Level] int NOT NULL,
+    CONSTRAINT [PK_LeadEmployeeMapper] PRIMARY KEY ([LeadEmployeeMapperID]),
+    CONSTRAINT [FK_LeadEmployeeMapper_Employees_EmployeeID] FOREIGN KEY ([EmployeeID]) REFERENCES [Employees] ([EmployeeID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_LeadEmployeeMapper_Leads_LeadID] FOREIGN KEY ([LeadID]) REFERENCES [Leads] ([LeadID]) ON DELETE CASCADE
+);
+2018-06-30 17:41:42.173 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_ApplicationUsers_EmployeeID1] ON [ApplicationUsers] ([EmployeeID1]);
+2018-06-30 17:41:42.184 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_ApplicationUsers_RoleID] ON [ApplicationUsers] ([RoleID]);
+2018-06-30 17:41:42.193 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_CustomerEnquiryDetails_CustomerID1] ON [CustomerEnquiryDetails] ([CustomerID1]);
+2018-06-30 17:41:42.206 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_CustomerEnquiryDetails_EmployeeID] ON [CustomerEnquiryDetails] ([EmployeeID]);
+2018-06-30 17:41:42.224 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_CustomerEnquiryDetails_LeadID] ON [CustomerEnquiryDetails] ([LeadID]);
+2018-06-30 17:41:42.249 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Employees_RoleID] ON [Employees] ([RoleID]);
+2018-06-30 17:41:42.255 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_LeadEmployeeMapper_EmployeeID] ON [LeadEmployeeMapper] ([EmployeeID]);
+2018-06-30 17:41:42.264 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_LeadEmployeeMapper_LeadID] ON [LeadEmployeeMapper] ([LeadID]);
+2018-06-30 17:41:42.271 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Leads_TeamId] ON [Leads] ([TeamId]);
+2018-06-30 17:41:42.833 +05:30 [Information] Microsoft.EntityFrameworkCore.Database.Command: Executed DbCommand (100ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Leads] AS [l])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-06-30 17:41:43.547 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/  
+2018-06-30 17:41:43.550 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 DEBUG http://localhost:50310/  0
+2018-06-30 17:41:43.606 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 57.0506ms 200 
+2018-06-30 17:41:44.423 +05:30 [Information] Microsoft.AspNetCore.Authorization.DefaultAuthorizationService: Authorization failed for user: (null).
+2018-06-30 17:41:44.438 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-06-30 17:41:44.452 +05:30 [Information] Microsoft.AspNetCore.Mvc.ChallengeResult: Executing ChallengeResult with authentication schemes ().
+2018-06-30 17:41:44.478 +05:30 [Information] Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler: AuthenticationScheme: Cookies was challenged.
+2018-06-30 17:41:44.491 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.HomeController.Index (TravelCRM) in 75.4229ms
+2018-06-30 17:41:44.574 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 972.3495ms 302 
+2018-06-30 17:41:44.583 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Login/Account/Login?ReturnUrl=%2F  
+2018-06-30 17:41:44.922 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) with arguments (/) - ModelState is Valid
+2018-06-30 17:41:54.035 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor: Executing ViewResult, running view at path /Areas/Login/Views/Account/Login.cshtml.
+2018-06-30 17:41:54.354 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.Login.AccountController.Login (TravelCRM) in 9563.4233ms
+2018-06-30 17:41:54.363 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 9784.9659ms 200 text/html; charset=utf-8
+2018-06-30 17:41:55.401 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/assets/font-awesome/css/font-awesome.min.css  
+2018-06-30 17:41:55.531 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/assets/font-awesome/css/font-awesome.min.css'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\assets\font-awesome\css\font-awesome.min.css'
+2018-06-30 17:41:55.554 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/assets/simple-line-icons/css/simple-line-icons.css  
+2018-06-30 17:41:55.618 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/assets/simple-line-icons/css/simple-line-icons.css'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\assets\simple-line-icons\css\simple-line-icons.css'
+2018-06-30 17:41:55.639 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 468.7893ms 200 text/css
+2018-06-30 17:41:55.655 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 432.2071ms 200 text/css
+2018-06-30 17:41:55.667 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/jquery/bootstrap/dist/js/bootstrap.js  
+2018-06-30 17:41:55.722 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/jquery/jquery/dist/jquery.js  
+2018-06-30 17:41:55.725 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/jquery/bootstrap/dist/js/bootstrap.js'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\jquery\bootstrap\dist\js\bootstrap.js'
+2018-06-30 17:41:55.820 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/jquery/jquery/dist/jquery.js'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\jquery\jquery\dist\jquery.js'
+2018-06-30 17:41:55.857 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/font.css  
+2018-06-30 17:41:55.861 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/app.css  
+2018-06-30 17:41:55.870 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/app.css'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\app.css'
+2018-06-30 17:41:55.893 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/font.css'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\font.css'
+2018-06-30 17:41:55.909 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/jquery/bootstrap/dist/css/bootstrap.css  
+2018-06-30 17:41:55.912 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/assets/animate.css/animate.css  
+2018-06-30 17:41:55.974 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/assets/animate.css/animate.css'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\assets\animate.css\animate.css'
+2018-06-30 17:41:55.982 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/jquery/bootstrap/dist/css/bootstrap.css'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\jquery\bootstrap\dist\css\bootstrap.css'
+2018-06-30 17:41:56.112 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 203.7377ms 200 text/css
+2018-06-30 17:41:56.171 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 463.7383ms 200 application/javascript
+2018-06-30 17:41:56.179 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Scripts/ui-load.js  
+2018-06-30 17:41:56.262 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Scripts/ui-load.js'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Scripts\ui-load.js'
+2018-06-30 17:41:56.320 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Scripts/ui-jp.config.js  
+2018-06-30 17:41:56.326 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 144.7428ms 200 application/javascript
+2018-06-30 17:41:56.371 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Scripts/ui-jp.js  
+2018-06-30 17:41:56.386 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Scripts/ui-jp.config.js'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Scripts\ui-jp.config.js'
+2018-06-30 17:41:56.445 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 104.1995ms 200 application/javascript
+2018-06-30 17:41:56.452 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Scripts/ui-jp.js'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Scripts\ui-jp.js'
+2018-06-30 17:41:56.473 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 123.1676ms 200 application/javascript
+2018-06-30 17:41:56.489 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Scripts/ui-nav.js  
+2018-06-30 17:41:56.515 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Scripts/ui-toggle.js  
+2018-06-30 17:41:56.519 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Scripts/ui-nav.js'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Scripts\ui-nav.js'
+2018-06-30 17:41:56.537 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 668.8949ms 200 text/css
+2018-06-30 17:41:56.552 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Scripts/ui-toggle.js'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Scripts\ui-toggle.js'
+2018-06-30 17:41:56.602 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 52.878ms 200 application/javascript
+2018-06-30 17:41:56.605 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Scripts/ui-client.js  
+2018-06-30 17:41:56.660 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Scripts/ui-client.js'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Scripts\ui-client.js'
+2018-06-30 17:41:56.662 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 141.9073ms 200 application/javascript
+2018-06-30 17:41:56.674 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 87.0276ms 200 application/javascript
+2018-06-30 17:41:56.704 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 784.1316ms 200 text/css
+2018-06-30 17:41:56.719 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 781.2161ms 200 text/css
+2018-06-30 17:41:56.751 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 1037.6112ms 200 application/javascript
+2018-06-30 17:41:56.887 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/fonts/sourcesanspro/sourcesanspro-bold.woff  
+2018-06-30 17:41:56.889 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/fonts/sourcesanspro/sourcesanspro.woff  
+2018-06-30 17:41:56.899 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/fonts/sourcesanspro/sourcesanspro-bold.woff'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\fonts\sourcesanspro\sourcesanspro-bold.woff'
+2018-06-30 17:41:56.937 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/fonts/sourcesanspro/sourcesanspro.woff'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\fonts\sourcesanspro\sourcesanspro.woff'
+2018-06-30 17:41:56.976 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 115.8216ms 200 application/font-woff
+2018-06-30 17:41:56.997 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 96.2993ms 200 application/font-woff
+2018-06-30 17:41:57.546 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/favicon.ico  
+2018-06-30 17:41:57.553 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/favicon.ico'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\favicon.ico'
+2018-06-30 17:41:57.611 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 44.9455ms 200 image/x-icon
+2018-06-30 17:42:16.330 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/employee/lead/index  
+2018-06-30 17:42:16.541 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 26.6981ms 404 
+2018-06-30 17:42:46.533 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/employee/employee/index  
+2018-06-30 17:42:46.547 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Areas.Employee.EmployeeController.Index (TravelCRM) with arguments ((null)) - ModelState is Valid
+2018-06-30 17:42:50.991 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor: Executing ViewResult, running view at path /Areas/Employee/Views/Employee/Index.cshtml.
+2018-06-30 17:42:59.507 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Areas.Employee.EmployeeController.Index (TravelCRM) in 12758.6344ms
+2018-06-30 17:42:59.545 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/js/jquery-1.10.2.js  
+2018-06-30 17:42:59.611 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Image/logo.png  
+2018-06-30 17:42:59.639 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 13012.1993ms 200 text/html; charset=utf-8
+2018-06-30 17:42:59.899 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/js/jquery-1.10.2.js'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\js\jquery-1.10.2.js'
+2018-06-30 17:42:59.973 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 313.9231ms 404 
+2018-06-30 17:42:59.995 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/images/a0.jpg  
+2018-06-30 17:43:00.007 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/assets/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0  
+2018-06-30 17:43:00.029 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/images/a0.jpg'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\images\a0.jpg'
+2018-06-30 17:43:00.040 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/assets/font-awesome/fonts/fontawesome-webfont.woff'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\assets\font-awesome\fonts\fontawesome-webfont.woff'
+2018-06-30 17:43:00.109 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 96.3094ms 200 image/jpeg
+2018-06-30 17:43:00.126 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 117.8272ms 200 application/font-woff
+2018-06-30 17:43:00.177 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 657.0302ms 200 application/javascript
+2018-06-30 17:43:00.456 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Content/assets/simple-line-icons/fonts/Simple-Line-Icons.woff  
+2018-06-30 17:43:00.464 +05:30 [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: Sending file. Request path: '/Content/assets/simple-line-icons/fonts/Simple-Line-Icons.woff'. Physical path: 'D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRM\wwwroot\Content\assets\simple-line-icons\fonts\Simple-Line-Icons.woff'
+2018-06-30 17:43:00.546 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 48.7677ms 200 application/font-woff
+2018-06-30 17:43:00.649 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 POST http://localhost:50310/Notification/GetAllNotification  0
+2018-06-30 17:43:00.682 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Controllers.NotificationController.GetAllNotification (TravelCRM) with arguments ((null)) - ModelState is Valid
+2018-06-30 17:43:02.714 +05:30 [Information] Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor: Executing JsonResult, writing value System.Collections.Generic.List`1[TravelCRM.Models.UserNotification].
+2018-06-30 17:43:02.744 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Controllers.NotificationController.GetAllNotification (TravelCRM) in 2064.7224ms
+2018-06-30 17:43:02.758 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 2111.341ms 200 application/json; charset=utf-8
+2018-06-30 17:43:19.110 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:50310/Employee/Employee/AssignLeads/1  
+2018-06-30 17:43:19.144 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method TravelCRM.Areas.Employee.EmployeeController.AssignLeads (TravelCRM) with arguments (0) - ModelState is Valid
+2018-06-30 17:43:23.825 +05:30 [Information] Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor: Executing PartialViewResult, running view at path /Views/Shared/ModalTag.cshtml.
+2018-06-30 17:43:23.845 +05:30 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action TravelCRM.Areas.Employee.EmployeeController.AssignLeads (TravelCRM) in 4702.1124ms
+2018-06-30 17:43:23.860 +05:30 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 4748.1364ms 200 text/html; charset=utf-8
