@@ -2,7 +2,8 @@
 @using System.Reflection;
 @using System.Security.Policy;
 @using System.Text;
-@*@using Microsoft.Ajax.Utilities;*@
+
+@using TravelCRM.Attributes;
 @using TravelCRM.ApplicationCore;
 @{
     Layout = null;
@@ -19,8 +20,8 @@
 }
 
 @*<div id="loading">
-    <img id="loading-image" src="" alt="Loading..." />
-</div>*@
+        <img id="loading-image" src="" alt="Loading..." />
+    </div>*@
 @if (properties != null)
 {
     <table id="myTable" class="table table-responsive table-hover table-condensed table-striped">
@@ -66,19 +67,21 @@
                             if (@prop.Name.Contains("Action_Version"))
                             {
                                 @*<td>
-                                    <a id="editUserModal" href="@Url.Action(((prop.GetValue(item)).Action_Action),((prop.GetValue(item)).Action_Controller), new {dnaversion=((prop.GetValue(item)).Action_ID).ToString()})" class="btn btn-primary btn-xs">
-                                        <i class="glyphicon glyphicon-pencil"></i>@((prop.GetValue(item)).ActionText)
-                                    </a>
-                                </td>*@
+                                        <a id="editUserModal" href="@Url.Action(((prop.GetValue(item)).Action_Action),((prop.GetValue(item)).Action_Controller), new {dnaversion=((prop.GetValue(item)).Action_ID).ToString()})" class="btn btn-primary btn-xs">
+                                            <i class="glyphicon glyphicon-pencil"></i>@((prop.GetValue(item)).ActionText)
+                                        </a>
+                                    </td>*@
                             }
 
                             else if (@prop.Name.Contains("Action"))
                             {
                                 <td>
-                                    <a asp-controller="@((prop.GetValue(item)).Action_Control)" asp-action="@((prop.GetValue(item)).Action_Action))" asp-route-id="@((prop.GetValue(item)).Action_ID)">page @((prop.GetValue(item)).ActionText)</a>
+                                    <a data-toggle="modal" data-target="#myModal" asp-controller="@((prop.GetValue(item)).Action_Controller)" asp-action="@((prop.GetValue(item)).Action_Action)" asp-route-id="@((prop.GetValue(item)).Action_ID)" asp-area="@((prop.GetValue(item)).Action_Area)"> @((prop.GetValue(item)).ActionText)</a>
+
                                     @*<a id="editUserModal" href="@Url.Action(((prop.GetValue(item)).Action_Action),((prop.GetValue(item)).Action_Controller), new {id=((prop.GetValue(item)).Action_ID) })" class="btn btn-primary btn-xs">
-                                        <i class="glyphicon glyphicon-pencil"></i>@((prop.GetValue(item)).ActionText)
-                                    </a>*@
+                                            <i class="glyphicon glyphicon-pencil"></i>@((prop.GetValue(item)).ActionText)
+                                        </a>*@
+
                                 </td>
                             }
                             else
@@ -91,4 +94,28 @@
             }
         </tbody>
     </table>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    ashcghdsvchjdbsckdcbhgdc dncvhdvch nm
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 }
+

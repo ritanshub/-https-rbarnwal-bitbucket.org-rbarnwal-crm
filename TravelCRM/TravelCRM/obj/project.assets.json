@@ -11726,7 +11726,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "y2cbgOx0QMrz6U4dkW4zKj58ZkzvNk+6nZOajr9Z41dZCJ7GTKhABSgxkCGQVPbecVtst0XkRV4WYlxnb6jNxA==",
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -13410,46 +13410,43 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rohit_PC\\.nuget\\packages\\": {},
-    "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Richa\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRM\\TravelCRM.csproj",
+      "projectUniqueName": "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\TravelCRM\\TravelCRM.csproj",
       "projectName": "TravelCRM",
-      "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRM\\TravelCRM.csproj",
-      "packagesPath": "C:\\Users\\Rohit_PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRM\\obj\\",
+      "projectPath": "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\TravelCRM\\TravelCRM.csproj",
+      "packagesPath": "C:\\Users\\Richa\\.nuget\\packages\\",
+      "outputPath": "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\TravelCRM\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rohit_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Richa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj": {
-              "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj"
+            "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRMServices\\TravelCRMServices.csproj": {
+              "projectPath": "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRMServices\\TravelCRMServices.csproj"
             },
-            "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRMServices\\TravelCRMServices.csproj": {
-              "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRMServices\\TravelCRMServices.csproj"
+            "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj": {
+              "projectPath": "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj"
             },
-            "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj": {
-              "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj"
+            "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj": {
+              "projectPath": "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\TravelCRMRepo\\TravelCRMRepo.csproj"
             }
           }
         }
@@ -13465,28 +13462,28 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "4.0.1"
-          },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Microsoft.Extensions.DependencyInjection": {
-            "target": "Package",
-            "version": "2.1.1"
-          },
-          "NetEscapades.Extensions.Logging.RollingFile": {
-            "target": "Package",
-            "version": "1.0.0"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
+            "version": "[4.0.1, )"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "NetEscapades.Extensions.Logging.RollingFile": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

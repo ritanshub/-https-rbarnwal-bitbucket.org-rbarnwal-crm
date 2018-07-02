@@ -31,6 +31,7 @@ namespace TravelCRM.ApplicationCore
 
         public void OnAuthorization(AuthorizationFilterContext context)
         {
+
             var user = context.HttpContext.User;
 
             if (!user.Identity.IsAuthenticated)

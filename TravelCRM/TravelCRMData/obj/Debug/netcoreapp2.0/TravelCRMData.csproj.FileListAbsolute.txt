@@ -11,3 +11,31 @@ C:\Users\Rohit_PC\source\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\T
 C:\Users\Rohit_PC\source\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.AssemblyInfo.cs
 C:\Users\Rohit_PC\source\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.dll
 C:\Users\Rohit_PC\source\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.pdb
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.deps.json
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.runtimeconfig.json
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.runtimeconfig.dev.json
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.dll
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.pdb
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMEntities.dll
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMEntities.pdb
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.csprojAssemblyReference.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.csproj.CoreCompileInputs.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.AssemblyInfoInputs.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.AssemblyInfo.cs
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.csproj.CopyComplete
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.dll
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.pdb
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.deps.json
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.runtimeconfig.json
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.runtimeconfig.dev.json
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.dll
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMData.pdb
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMEntities.dll
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\bin\Debug\netcoreapp2.0\TravelCRMEntities.pdb
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.csprojAssemblyReference.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.csproj.CoreCompileInputs.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.AssemblyInfoInputs.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.AssemblyInfo.cs
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.csproj.CopyComplete
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.dll
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\TravelCRMData\obj\Debug\netcoreapp2.0\TravelCRMData.pdb

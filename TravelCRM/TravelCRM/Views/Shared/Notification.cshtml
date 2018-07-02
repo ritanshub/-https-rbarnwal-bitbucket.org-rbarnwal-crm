@@ -1,61 +1,57 @@
-﻿@model IEnumerable<TravelCRM.Models.UserNotification>
+﻿@*@model IEnumerable<TravelCRM.Models.UserNotification>*@
 
 @{
     Layout = null;
 }
-<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+<script src="~/js/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(function () {
+            $.ajax
+                ({
+                    type: 'post',
+                    url: '/Notification/GetAllNotification',
+                    dataType: 'json',
+                    data: {},
+                    success: function (data) {
+                        html = data.length;
+                        $("#notcount").append(html);
+
+                        var not = "notifications";
+                        html = "<strong> You have <span>" + data.length + "</span> " + not + "</strong > </div >";
+                        $("#notificount").append(html);
+                        html = "";
+                        for (var i = 0; i < data.length; i++) {
+                            html += "<a class='list-group-item'><span class='clear block m-b-none'>" + data[i].details + "<br> <small class='text - muted'> " + data[i].details + "</small><br></span></a>";
+                        }
+
+                        $("#notifidata").append(html);
+
+                    },
+                    error: function (response) {
+                        var r = jQuery.parseJSON(response.responseText);
+                        alert("Message: " + r.Message);
+                    }
+                });
+
+            event.preventDefault();
+            event.stopPropagation();
+        });
+    });
+</script>
+<a data-toggle="dropdown" class="dropdown-toggle notifi">
     <i class="icon-bell fa-fw"></i>
     <span class="visible-xs-inline">Notifications</span>
-    <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+    <span class="badge badge-sm up bg-danger pull-right-xs" id="notcount"></span>
 </a>
 <!-- dropdown -->
 <div class="dropdown-menu w-xl animated fadeInUp">
 
     <div class="panel bg-white">
-        <div class="panel-heading b-light bg-light">
-            <strong>You have <span>2</span> notifications</strong>
+        <div class="panel-heading b-light bg-light" id="notificount">
         </div>
-        <div class="list-group">
-            <a class="list-group-item">
-                <span class="clear block m-b-none">
-                    Sjhvschc
-                    <br>
-                    <small class="text-muted">svjvjcsv</small>
-                </span>
-            </a>
-            <a class="list-group-item">
-                <span class="clear block m-b-none">
-                    Sjhvschc
-                    <br>
-                    <small class="text-muted">svjvjcsv</small>
-                </span>
-            </a>
-
-            @if (Model != null || Model.Count() > 0)
-               {
-                @foreach (var item in Model)
-                {
-                    <a class="list-group-item">
-                        <span class="clear block m-b-none">
-
-                            @Html.DisplayFor(modelItem => item.Details)
-                            <br>
-                            <small class="text-muted">  @Html.DisplayFor(modelItem => item.Date)</small>
-                        </span>
-                    </a>
-                }
-            }
-            else
-            {
-
-            <a class="list-group-item">
-                <span class="clear block m-b-none">
-                    No Notifications
-
-                </span>
-            </a>
-            }
-
+        <div class="list-group" id="notifidata">
 
         </div>
         <div class="panel-footer text-sm">

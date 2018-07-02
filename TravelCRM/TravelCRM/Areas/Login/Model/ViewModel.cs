@@ -13,7 +13,7 @@ namespace TravelCRM.Areas.Login.Model
         public string LastName { get; set; }
         public string EmailID { get; set; }
         public int MobileNUmber { get; set; }
-
+        public string ManagerName { get; set; }
         public DateTime DOB { get; set; }
         
         //public Role Role { get; set; }

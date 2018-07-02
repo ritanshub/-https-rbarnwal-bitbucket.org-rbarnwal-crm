@@ -664,33 +664,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rohit_PC\\.nuget\\packages\\": {},
-    "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Richa\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj",
+      "projectUniqueName": "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj",
       "projectName": "MenuManager",
-      "projectPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj",
-      "packagesPath": "C:\\Users\\Rohit_PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rohit_PC\\source\\repos\\TravelCRM\\ManuManager\\obj\\",
+      "projectPath": "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\ManuManager\\MenuManager.csproj",
+      "packagesPath": "C:\\Users\\Richa\\.nuget\\packages\\",
+      "outputPath": "D:\\POC\\29thJuneCRM\\repos_29_June_2018\\repos\\TravelCRM\\ManuManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Users\\Rohit_PC\\.dotnet\\x64\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rohit_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Richa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -710,7 +707,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },

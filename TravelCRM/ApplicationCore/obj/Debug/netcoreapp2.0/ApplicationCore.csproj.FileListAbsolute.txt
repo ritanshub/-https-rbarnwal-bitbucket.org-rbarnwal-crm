@@ -6,3 +6,20 @@ C:\Users\Rohit_PC\source\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0
 C:\Users\Rohit_PC\source\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.AssemblyInfo.cs
 C:\Users\Rohit_PC\source\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.dll
 C:\Users\Rohit_PC\source\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.pdb
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ApplicationCore\bin\Debug\netcoreapp2.0\ApplicationCore.deps.json
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ApplicationCore\bin\Debug\netcoreapp2.0\ApplicationCore.dll
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ApplicationCore\bin\Debug\netcoreapp2.0\ApplicationCore.pdb
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.csprojAssemblyReference.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.AssemblyInfo.cs
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.dll
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.pdb
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ApplicationCore\bin\Debug\netcoreapp2.0\ApplicationCore.deps.json
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ApplicationCore\bin\Debug\netcoreapp2.0\ApplicationCore.dll
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ApplicationCore\bin\Debug\netcoreapp2.0\ApplicationCore.pdb
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.csproj.CoreCompileInputs.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.AssemblyInfoInputs.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.AssemblyInfo.cs
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.dll
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ApplicationCore\obj\Debug\netcoreapp2.0\ApplicationCore.pdb

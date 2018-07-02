@@ -6,3 +6,20 @@ C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\Men
 C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.pdb
 C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.dll
 C:\Users\Rohit_PC\source\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.pdb
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.deps.json
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.dll
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.pdb
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.csprojAssemblyReference.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.csproj.CoreCompileInputs.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.AssemblyInfoInputs.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.AssemblyInfo.cs
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.dll
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.pdb
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.deps.json
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.dll
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ManuManager\bin\Debug\netcoreapp2.0\MenuManager.pdb
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.csproj.CoreCompileInputs.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.AssemblyInfoInputs.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.AssemblyInfo.cs
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.dll
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\ManuManager\obj\Debug\netcoreapp2.0\MenuManager.pdb

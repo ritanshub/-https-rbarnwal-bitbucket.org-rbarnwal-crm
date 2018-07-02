@@ -9,6 +9,8 @@ using TravelCRMServices;
 using TravelCRMEntities;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
+using TravelCRM.Models;
+using System.Collections.Generic;
 
 namespace TravelCRM.Controllers.Login
 {
@@ -89,6 +91,15 @@ namespace TravelCRM.Controllers.Login
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction(nameof(AccountController.Login), "Account", new { area = "Login" });
+        }
+
+        public ActionResult GetUserProfile(string customerId)
+        {
+            List<UserNotification> lstnotifi = new List<UserNotification>();
+            UserNotification notifimodel = new UserNotification { Title = "abc", Details = "Notification Accepted" };
+            lstnotifi.Add(notifimodel);
+
+            return PartialView("Details", lstnotifi);
         }
     }
 }

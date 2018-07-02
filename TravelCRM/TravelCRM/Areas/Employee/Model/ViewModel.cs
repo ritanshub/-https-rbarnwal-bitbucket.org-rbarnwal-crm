@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TravelCRM.Models;
 
 namespace TravelCRM.Areas.Employee.Model
 {
@@ -25,6 +26,8 @@ namespace TravelCRM.Areas.Employee.Model
 
 
         public string StayPeriod { get; set; }
+
+        public GridAction EditAction { get; set; }
     }
     //public class UserNotification
     //{

@@ -6,3 +6,21 @@ C:\Users\Rohit_PC\source\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Securi
 C:\Users\Rohit_PC\source\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.pdb
 C:\Users\Rohit_PC\source\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.dll
 C:\Users\Rohit_PC\source\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.pdb
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.deps.json
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.dll
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.pdb
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.csprojAssemblyReference.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.csproj.CoreCompileInputs.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.AssemblyInfoInputs.cache
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.AssemblyInfo.cs
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.dll
+C:\Users\Md\Downloads\repos (1)\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.pdb
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.deps.json
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.dll
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\Security\bin\Debug\netcoreapp2.0\Security.pdb
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.csprojAssemblyReference.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.csproj.CoreCompileInputs.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.AssemblyInfoInputs.cache
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.AssemblyInfo.cs
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.dll
+D:\POC\29thJuneCRM\repos_29_June_2018\repos\TravelCRM\Security\obj\Debug\netcoreapp2.0\Security.pdb

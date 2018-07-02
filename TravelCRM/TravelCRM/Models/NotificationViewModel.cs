@@ -5,15 +5,10 @@ using System.Threading.Tasks;
 
 namespace TravelCRM.Models
 {
-    public class NotificationViewModel
+    public class UserNotification
     {
-        public IEnumerable<UserNotification> Notify { get; private set; }
-
-        public NotificationViewModel(IEnumerable<UserNotification> pirates)
-        {
-            Notify = pirates;
-        }
+        public string Title { get; set; }
+        public string Details { get; set; }
+        public string Date { get; set; }
     }
-
-
 }
